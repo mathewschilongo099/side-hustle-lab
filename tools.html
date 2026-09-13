@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tools — Side Hustle Lab</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="/">Side Hustle Lab</a>
+    <nav>
+      <a href="/guides.html">Guides</a>
+      <a href="/tools.html">Tools</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Tools</h1>
+    <p class="lead">Fast calculators. Numbers stay on your device.</p>
+
+    <section id="debt" class="tool-panel">
+      <h2>Debt snowball planner</h2>
+      <p>Extra cash hits the smallest balance first. Ignores interest so you can see order of operations.</p>
+      <form id="debt-form" class="tool-grid">
+        <label>Name<input id="d1n" value="Store card" /></label>
+        <label>Balance<input id="d1b" type="number" value="800" min="0" /></label>
+        <label>Minimum<input id="d1m" type="number" value="35" min="0" /></label>
+        <label>Name<input id="d2n" value="Credit card" /></label>
+        <label>Balance<input id="d2b" type="number" value="2400" min="0" /></label>
+        <label>Minimum<input id="d2m" type="number" value="75" min="0" /></label>
+        <label>Name<input id="d3n" value="Personal loan" /></label>
+        <label>Balance<input id="d3b" type="number" value="5100" min="0" /></label>
+        <label>Minimum<input id="d3m" type="number" value="140" min="0" /></label>
+        <label>Extra / month<input id="extra" type="number" value="150" min="0" /></label>
+      </form>
+      <div class="stat-row">
+        <div class="stat"><span>Months to clear</span><strong id="debt-months">—</strong></div>
+        <div class="stat"><span>Total paid (sketch)</span><strong id="debt-paid">—</strong></div>
+      </div>
+      <ol id="debt-order"></ol>
+    </section>
+
+    <section id="hustle" class="tool-panel">
+      <h2>Hustle take-home math</h2>
+      <p>Gross is vanity. After expenses and a tax set-aside, is the Saturday still worth it?</p>
+      <form id="hustle-form" class="tool-grid">
+        <label>Hours / week<input id="hours" type="number" value="8" min="0" /></label>
+        <label>Rate / hour ($)<input id="rate" type="number" value="35" min="0" /></label>
+        <label>Monthly expenses ($)<input id="expenses" type="number" value="40" min="0" /></label>
+        <label>Tax set-aside (%)<input id="taxPct" type="number" value="25" min="0" /></label>
+        <label>Weeks this month<input id="weeks" type="number" value="4" min="0" /></label>
+      </form>
+      <div class="stat-row">
+        <div class="stat"><span>Gross</span><strong id="gross">—</strong></div>
+        <div class="stat"><span>Tax set-aside</span><strong id="tax">—</strong></div>
+        <div class="stat accent"><span>You keep</span><strong id="keep">—</strong></div>
+        <div class="stat"><span>True hourly</span><strong id="hourly">—</strong></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p class="fine">Educational information only. Not financial, tax, or legal advice.</p>
+  </footer>
+  <script src="/content.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
